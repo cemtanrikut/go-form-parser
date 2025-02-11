@@ -2,6 +2,7 @@ package pdf
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/jung-kurt/gofpdf"
 	"main.go/internal/parser"
@@ -9,6 +10,11 @@ import (
 
 // GeneratePDF takes a parsed Form and creates a PDF representation
 func GeneratePDF(form *parser.Form, outputFilename string) error {
+	// Ensure the output directory exists
+	if err := os.MkdirAll("output", os.ModePerm); err != nil {
+		return fmt.Errorf("failed to create output directory: %v", err)
+	}
+
 	pdf := gofpdf.New("P", "mm", "A4", "")
 	pdf.AddPage()
 	pdf.SetFont("Arial", "B", 16)

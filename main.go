@@ -14,7 +14,7 @@ func main() {
 		log.Fatalf("Error parsing XML: %s", err)
 	}
 
-	err = pdf.GeneratePDF(form, "form_output.pdf")
+	err = pdf.GeneratePDF(form, "output/form_output.pdf")
 	if err != nil {
 		log.Fatalf("Error generating PDF: %s", err)
 	}

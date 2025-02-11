@@ -1,0 +1,14 @@
+<Form>
+    <Field Name="program_language" Type="Enumeration(A,B,C)" Optional="False" FieldType="Select">
+        <Caption>Pick your programming language</Caption>
+    </Field>
+
+    <Section Name="experience" Optional="False">
+        <Title>Regarding your experience</Title>
+        <Contents>
+            <Field Name="other" Type="Text([0,200],Lines:4)" Optional="True" FieldType="TextBox">
+                <Caption>Other programming experiences</Caption>
+            </Field>
+        </Contents>
+    </Section>
+</Form>

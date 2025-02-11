@@ -9,6 +9,9 @@ build:
 run:
 	go run main.go
 
+test:
+	go test ./...
+
 clean:
 	rm -rf $(APP_NAME) $(OUTPUT_PDF) $(OUTPUT_DIR)
 
